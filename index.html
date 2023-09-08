@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+</head>
+<body>
+    <h1>ようこそ！</h1>
+    
+    <!-- 音声ファイルを再生するためのオーディオ要素 -->
+    <audio id="audio" controls style="display: none;">
+        <source src="sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        // ページが読み込まれたら音を再生
+        window.onload = function() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        };
+    </script>
+</body>
+</html>
