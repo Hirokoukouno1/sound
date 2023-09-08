@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>test</title>
+    <title>ボタンをクリックして音を鳴らす</title>
 </head>
 <body>
-    <h1>ようこそ！</h1>
+    <h1>音を鳴らすサイト</h1>
     
     <!-- 音声ファイルを再生するためのオーディオ要素 -->
-    <audio id="audio" controls style="display: none;">
+    <audio id="audio">
         <source src="sound.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     
+    <!-- ボタンをクリックして音を再生するスクリプト -->
+    <button onclick="playSound()">音を鳴らす</button>
+    
     <script>
-        // ページが読み込まれたら音を再生
-        window.onload = function() {
+        // ボタンクリック時に音を再生
+        function playSound() {
             var audio = document.getElementById("audio");
             audio.play();
-        };
+        }
     </script>
 </body>
 </html>
